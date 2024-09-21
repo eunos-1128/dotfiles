@@ -1,0 +1,30 @@
+# Environmental Variables
+export JUPYTER_RUNTIME_DIR=/tmp
+export JUPYTER_ALLOW_INSECURE_WRITES=1
+
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+
+alias ls='ls --color=auto'
+
+
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/uenom/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/uenom/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
+. "$HOME/.cargo/env"
+
+export SHELL="/bin/zsh"
+exec "$SHELL"

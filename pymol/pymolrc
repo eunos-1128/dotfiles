@@ -1,0 +1,5 @@
+set internal_gui_width, 800
+
+# pymol scripts
+sys.path.append('/home/pg01_ueno/repos/pymol-psico')
+import psico.fullinit

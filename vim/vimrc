@@ -1,0 +1,100 @@
+" ターミナルの背景をダークに設定
+set background=dark
+
+" Enable line numbers
+set number
+
+" Enable line highlighting
+set cursorline
+
+" Enable syntax highlighting
+syntax enable
+
+" Enable line indenting
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Enable line wrapping
+set wrap
+
+" Show matching brackets/parentheses
+set showmatch
+
+" Enable clipboard support (requires Vim to be compiled with +clipboard)
+set clipboard=unnamedplus
+
+" Enable mouse support
+set mouse=a
+
+" Enable incremental search
+set incsearch
+
+" Show line and column number in the status line
+set ruler
+
+" Enable split line navigation
+set splitbelow
+set splitright
+
+" For better auto-completion
+set wildmenu
+
+" Show line numbers relative to the cursor position
+set relativenumber
+
+" Remove trailing whitespaces automatically
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Initialize plugin system (Assuming you're using vim-plug)
+call plug#begin('~/.vim/plugged')
+
+" --- Coding efficiency ---
+" NERDTree for file explorer
+Plug 'preservim/nerdtree'
+
+" Coc.nvim for autocomplete and linting
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Tagbar for code tagging
+Plug 'preservim/tagbar'
+
+" Ale for asynchronous linting
+Plug 'dense-analysis/ale'
+
+" --- Search & Navigation ---
+" fzf for fuzzy searching
+Plug 'junegunn/fzf', { 'do': 'fzf#install()' }
+Plug 'junegunn/fzf.vim'
+
+" Ag.vim for fast code/file search
+Plug 'rking/ag.vim'
+
+" --- UI/UX ---
+" vim-airline for a better status line
+Plug 'vim-airline/vim-airline'
+
+" gruvbox color scheme
+Plug 'morhetz/gruvbox'
+
+" vim-devicons for better NERDTree and status line icons
+Plug 'ryanoasis/vim-devicons'
+
+" End of vim-plug initialization
+call plug#end()
+
+" Additional Configurations
+" Color scheme gruvbox
+colorscheme gruvbox
+
+" Enable vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" NERDTree toggle command
+map <C-n> :NERDTreeToggle<CR>
+
+" Tagbar toggle command
+nmap <F8> :TagbarToggle<CR>
+
+" Your custom settings can go below this line

@@ -1,0 +1,9 @@
+# User-defined shell functions
+function cd() {
+    if [[ -z "$1"  ]]; then
+        builtin cd && ls
+        return
+    fi
+
+    builtin cd "$1" && ls .
+}
