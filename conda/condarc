@@ -1,0 +1,4 @@
+channels:
+    - conda-forge
+    - bioconda
+auto_activate_base: false
