@@ -3,8 +3,9 @@ import os
 set internal_gui_width, 800
 
 # Import Pymol ScrIpt COllection (PSICO)
-psico_path = os.path.expanduser("~/pymol-psico")
+psico_path = os.path.expanduser("~/.local/lib/pymol-psico")
 if not os.path.exists(psico_path):
+    os.makedirs(psico_path, exist_ok=True)
     os.system('git clone https://github.com/speleo3/pymol-psico.git ' + psico_path)
     print("PSICO successfully cloned")
 else:
