@@ -118,11 +118,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-source "$HOME/.rye/env"
 PATH="/home/uenom/.local/bin:$PATH"
-
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -161,4 +157,3 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
-. "$HOME/.cargo/env"
