@@ -44,17 +44,3 @@ Feel free to customize the dotfiles to match your preferences:
 1. Modify any configuration file in the repository
 2. Run `./install.sh` again to update the symbolic links
 
-## Directory Structure
-
-```
-dotfiles/
-├── bash/               # Bash shell configuration
-├── bin/                # Executable scripts (will be linked to ~/.local/bin)
-├── config/             # XDG config files (will be linked to ~/.config)
-├── git/                # Git configuration
-├── pymol/              # PyMOL configuration
-├── vim/                # Vim editor configuration
-├── install.sh          # Installation script
-├── codespace_startup.sh # GitHub Codespaces specific configuration
-└── README.md           # This file
-```
