@@ -17,13 +17,13 @@ This repository contains configuration files for:
 The installation process is simple:
 
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/dotfiles.git ~/.dotfiles
+   ```shell
+   git clone https://github.com/yourusername/dotfiles.git
    ```
 
 2. Run the installation script:
-   ```bash
-   cd ~/.dotfiles
+   ```shell
+   cd dotfiles
    chmod +x install.sh
    ./install.sh
    ```
