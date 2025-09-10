@@ -1,0 +1,16 @@
+version = 1
+
+[envs.dssp]
+channels = ["conda-forge"]
+dependencies = { dssp = "*" }
+exposed = { mkdssp = "mkdssp" }
+
+[envs.conda-build]
+channels = ["conda-forge"]
+dependencies = { conda-build = "*" }
+exposed = { conda-build = "conda-build", conda-convert = "conda-convert", conda-debug = "conda-debug", conda-develop = "conda-develop", conda-inspect = "conda-inspect", conda-metapackage = "conda-metapackage", conda-render = "conda-render", conda-skeleton = "conda-skeleton" }
+
+[envs.rainfrog]
+channels = ["conda-forge"]
+dependencies = { rainfrog = "*" }
+exposed = { rainfrog = "rainfrog" }
