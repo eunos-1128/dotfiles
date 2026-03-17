@@ -1,10 +1,5 @@
 version = 1
 
-[envs.dssp]
-channels = ["conda-forge"]
-dependencies = { dssp = "*" }
-exposed = { mkdssp = "mkdssp" }
-
 [envs.git-lfs]
 channels = ["conda-forge"]
 dependencies = { git-lfs = "*" }
@@ -128,11 +123,6 @@ channels = ["conda-forge"]
 dependencies = { perl = "*" }
 exposed = { ptar = "ptar", shasum = "shasum", xsubpp = "xsubpp", corelist = "corelist", cpan = "cpan", enc2xs = "enc2xs", encguess = "encguess", h2ph = "h2ph", h2xs = "h2xs", instmodsh = "instmodsh", json_pp = "json_pp", libnetcfg = "libnetcfg", perl = "perl", "perl5.32.1" = "perl5.32.1", perlbug = "perlbug", perldoc = "perldoc", perlivp = "perlivp", perlthanks = "perlthanks", piconv = "piconv", pl2pm = "pl2pm", pod2html = "pod2html", pod2man = "pod2man", pod2text = "pod2text", pod2usage = "pod2usage", prove = "prove", ptardiff = "ptardiff", splain = "splain", zipdetails = "zipdetails", podchecker = "podchecker", ptargrep = "ptargrep", streamzip = "streamzip" }
 
-[envs.juliaup]
-channels = ["conda-forge"]
-dependencies = { juliaup = "*" }
-exposed = { julia = "julia", juliaup = "juliaup" }
-
 [envs.gtop]
 channels = ["conda-forge"]
 dependencies = { gtop = "*" }
@@ -230,11 +220,6 @@ exposed = { aria2c = "aria2c" }
 channels = ["conda-forge"]
 dependencies = { apptainer = "*" }
 exposed = { apptainer = "apptainer", run-singularity = "run-singularity", singularity = "singularity" }
-
-[envs.podman]
-channels = ["conda-forge"]
-dependencies = { podman = "*" }
-exposed = { podman = "podman", podman-remote = "podman-remote", podmansh = "podmansh" }
 
 [envs.jq]
 channels = ["conda-forge"]
@@ -525,8 +510,148 @@ channels = ["conda-forge"]
 dependencies = { uv = "*" }
 exposed = { uv = "uv", uvx = "uvx" }
 
-[envs.codex]
+[envs.dssp]
 channels = ["conda-forge"]
-dependencies = { codex = "*" }
-exposed = { codex = "codex" }
+dependencies = { dssp = "*" }
+exposed = { mkdssp = "mkdssp" }
 
+[envs.conda]
+channels = ["conda-forge"]
+dependencies = { conda = "*" }
+exposed = { activate = "activate", conda = "conda", conda-env = "conda-env", deactivate = "deactivate" }
+
+[envs.mamba]
+channels = ["conda-forge"]
+dependencies = { mamba = "*" }
+exposed = { mamba = "mamba" }
+
+[envs.coot-headless]
+channels = ["./packages", "conda-forge", "bioconda"]
+dependencies = { coot-headless = "*" }
+
+[envs.voronota]
+channels = ["bioconda", "conda-forge"]
+dependencies = { voronota = "*" }
+exposed = { voronota = "voronota", voronota-cadscore = "voronota-cadscore", voronota-contacts = "voronota-contacts", voronota-gl = "voronota-gl", voronota-js = "voronota-js", voronota-js-fast-iface-cadscore = "voronota-js-fast-iface-cadscore", voronota-js-fast-iface-cadscore-matrix = "voronota-js-fast-iface-cadscore-matrix", voronota-js-fast-iface-contacts = "voronota-js-fast-iface-contacts", voronota-js-fast-iface-data-graph = "voronota-js-fast-iface-data-graph", voronota-js-fast-iface-voromqa = "voronota-js-fast-iface-voromqa", voronota-js-ifeatures-voromqa = "voronota-js-ifeatures-voromqa", voronota-js-ligand-cadscore = "voronota-js-ligand-cadscore", voronota-js-membrane-voromqa = "voronota-js-membrane-voromqa", voronota-js-only-global-voromqa = "voronota-js-only-global-voromqa", voronota-js-pdb-utensil-detect-inter-structure-contacts = "voronota-js-pdb-utensil-detect-inter-structure-contacts", voronota-js-pdb-utensil-download-structure = "voronota-js-pdb-utensil-download-structure", voronota-js-pdb-utensil-filter-atoms = "voronota-js-pdb-utensil-filter-atoms", voronota-js-pdb-utensil-print-sequence-from-structure = "voronota-js-pdb-utensil-print-sequence-from-structure", voronota-js-pdb-utensil-rename-chains = "voronota-js-pdb-utensil-rename-chains", voronota-js-pdb-utensil-renumber-by-sequence = "voronota-js-pdb-utensil-renumber-by-sequence", voronota-js-pdb-utensil-split-to-models = "voronota-js-pdb-utensil-split-to-models", voronota-js-voroif-gnn = "voronota-js-voroif-gnn", voronota-js-voromqa = "voronota-js-voromqa", voronota-lt = "voronota-lt", voronota-membrane = "voronota-membrane", voronota-pocket = "voronota-pocket", voronota-resources = "voronota-resources", voronota-volumes = "voronota-volumes", voronota-voromqa = "voronota-voromqa" }
+
+[envs.yash]
+channels = ["conda-forge"]
+dependencies = { yash = "*" }
+exposed = { yash = "yash" }
+
+[envs.snakemake]
+channels = ["bioconda", "conda-forge"]
+dependencies = { snakemake = "*" }
+exposed = { snakemake = "snakemake", snakemake-bash-completion = "snakemake-bash-completion" }
+
+[envs.servalcat]
+channels = ["conda-forge"]
+dependencies = { servalcat = "*" }
+exposed = { ".servalcat-post-link" = ".servalcat-post-link", refmacat = "refmacat", servalcat = "servalcat" }
+
+[envs.conda-index]
+channels = ["conda-forge"]
+dependencies = { conda-index = "*" }
+
+[envs.nix]
+channels = ["conda-forge"]
+dependencies = { nix = "*" }
+exposed = { nix = "nix", nix-build = "nix-build", nix-channel = "nix-channel", nix-collect-garbage = "nix-collect-garbage", nix-copy-closure = "nix-copy-closure", nix-daemon = "nix-daemon", nix-env = "nix-env", nix-hash = "nix-hash", nix-instantiate = "nix-instantiate", nix-prefetch-url = "nix-prefetch-url", nix-shell = "nix-shell", nix-store = "nix-store" }
+
+[envs.tar]
+channels = ["conda-forge"]
+dependencies = { tar = "*" }
+exposed = { tar = "tar" }
+
+[envs.zstd]
+channels = ["conda-forge"]
+dependencies = { zstd = "*" }
+exposed = { unzstd = "unzstd", zstd = "zstd", zstdcat = "zstdcat", zstdgrep = "zstdgrep", zstdless = "zstdless", zstdmt = "zstdmt" }
+
+[envs.zstandard]
+channels = ["conda-forge"]
+dependencies = { zstandard = "*" }
+
+[envs.hf-xet]
+channels = ["conda-forge"]
+dependencies = { hf-xet = "*" }
+
+[envs.huggingface_hub]
+channels = ["conda-forge"]
+dependencies = { huggingface_hub = "*" }
+exposed = { hf = "hf", tiny-agents = "tiny-agents" }
+
+[envs.git-filter-repo]
+channels = ["conda-forge"]
+dependencies = { git-filter-repo = "*" }
+exposed = { git-filter-repo = "git-filter-repo" }
+
+[envs.distrobox]
+channels = ["conda-forge"]
+dependencies = { distrobox = "*" }
+exposed = { distrobox = "distrobox", distrobox-assemble = "distrobox-assemble", distrobox-create = "distrobox-create", distrobox-enter = "distrobox-enter", distrobox-ephemeral = "distrobox-ephemeral", distrobox-export = "distrobox-export", distrobox-generate-entry = "distrobox-generate-entry", distrobox-host-exec = "distrobox-host-exec", distrobox-init = "distrobox-init", distrobox-list = "distrobox-list", distrobox-rm = "distrobox-rm", distrobox-stop = "distrobox-stop", distrobox-upgrade = "distrobox-upgrade" }
+
+[envs.lilipod]
+channels = ["conda-forge"]
+dependencies = { lilipod = "*" }
+exposed = { lilipod = "lilipod" }
+
+[envs.duckdb-cli]
+channels = ["conda-forge"]
+dependencies = { duckdb-cli = "*" }
+exposed = { duckdb = "duckdb" }
+
+[envs.bottom]
+channels = ["conda-forge"]
+dependencies = { bottom = "*" }
+exposed = { btm = "btm" }
+
+[envs.btop]
+channels = ["conda-forge"]
+dependencies = { btop = "*" }
+exposed = { btop = "btop" }
+
+[envs.molscript]
+channels = ["conda-forge"]
+dependencies = { molscript = "*" }
+exposed = { molauto = "molauto", molscript = "molscript" }
+
+[envs.nvitop]
+channels = ["conda-forge"]
+dependencies = { nvitop = "*" }
+exposed = { nvitop = "nvitop", nvisel = "nvisel" }
+
+[envs.juliaup]
+channels = ["conda-forge"]
+dependencies = { juliaup = "*" }
+exposed = { julia = "julia", juliaup = "juliaup" }
+
+[envs.nvtop]
+channels = ["conda-forge"]
+dependencies = { nvtop = "*" }
+exposed = { nvtop = "nvtop" }
+
+[envs.nviwatch]
+channels = ["conda-forge"]
+dependencies = { nviwatch = "*" }
+exposed = { nviwatch = "nviwatch" }
+
+[envs.tree]
+channels = ["conda-forge"]
+dependencies = { tree = "*" }
+exposed = { tree = "tree" }
+
+[envs.tre-command]
+channels = ["conda-forge"]
+dependencies = { tre-command = "*" }
+exposed = { tre = "tre" }
+
+[envs.go-yq]
+channels = ["conda-forge"]
+dependencies = { go-yq = "*" }
+exposed = { yq = "yq" }
+
+[envs.taskwarrior]
+channels = ["conda-forge"]
+dependencies = { taskwarrior = "*" }
+exposed = { task = "task" }
